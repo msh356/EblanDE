@@ -1,0 +1,25 @@
+pkgbase = eblande-session
+	pkgdesc = Next-generation domestic desktop
+	pkgver = 0.1
+	pkgrel = 1
+	url = t.me/Eblan_DE
+	arch = x86_64
+	license = GPL
+	depends = openbox
+	depends = pcmanfm
+	depends = tint2
+	depends = dunst
+	depends = flameshot
+	depends = xdialog
+	depends = bash
+	depends = mousepad
+	depends = lxappearance-obconf-gtk3
+	depends = obconf-qt
+	source = eblan-autostart
+	source = eblande-session
+	source = eblande.desktop
+	sha256sums = ba285f70faabd53da90633dcb89b65cf48054fbf19dccbbc96c20679d7d41f8f
+	sha256sums = ebcece890d61eb30c7ee43058b57baa0b70fa31c68e3ec3b258ec5c6e614f8ee
+	sha256sums = 727c75f7b8ab80b9b2406f839dfb4ff2a896a9307b794715484a30cc962b4828
+
+pkgname = eblande-session
