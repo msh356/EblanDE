@@ -1,4 +1,4 @@
-pkgbase = eblande-session
+pkgbase = eblande
 	pkgdesc = Next-generation domestic desktop
 	pkgver = 0.1
 	pkgrel = 1
@@ -22,4 +22,4 @@ pkgbase = eblande-session
 	sha256sums = ebcece890d61eb30c7ee43058b57baa0b70fa31c68e3ec3b258ec5c6e614f8ee
 	sha256sums = 727c75f7b8ab80b9b2406f839dfb4ff2a896a9307b794715484a30cc962b4828
 
-pkgname = eblande-session
+pkgname = eblande

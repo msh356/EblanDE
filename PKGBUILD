@@ -1,5 +1,5 @@
 # Maintainer: msh356 <msh356@yandex.by>
-pkgname=eblande-session
+pkgname=eblande
 pkgver=0.1
 pkgrel=1
 pkgdesc="Next-generation domestic desktop"
