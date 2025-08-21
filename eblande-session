@@ -1,0 +1,14 @@
+#!/bin/bash
+export DESKTOP_SESSION=EblanDE
+export XDG_CURRENT_DESKTOP=EblanDE
+
+# Main daemons
+pcmanfm --desktop &
+tint2 &
+dunst &
+flameshot &
+eblan-autostart &
+nm-applet &
+
+# Openbox
+exec openbox-session

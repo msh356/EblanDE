@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=EblanDE
+Comment=Next-generation domestic desktop environment
+Exec=eblande-session
+TryExec=eblande-session
+Icon=
+Type=Application
+X-LightDM-DesktopName=EblanDE
