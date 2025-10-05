@@ -46,6 +46,7 @@ while true; do
        		    echo "ВКЛ" > ~/.config/eblan/compositing-enabled
        		    nohup picom
        		fi
+       		;;
        	9)
        		exit
        		;;
