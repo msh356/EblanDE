@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=EblanConfig
+Icon=preferences-system
+Exec=eblan-config
+Comment=Утилита конфигурации EblanConfig
+StartupNotify=true
+Terminal=false
+Categories=GTK;Settings;HardwareSettings;X-LXDE-Settings;
+NotShowIn=GNOME;KDE;XFCE;MATE;

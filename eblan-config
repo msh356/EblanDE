@@ -1,0 +1,44 @@
+#!/bin/bash
+
+while true; do
+	CHOICE=$(Xdialog --menu "Настройки EblanDE:" 15 50 4 \
+	1 "Настройка Openbox" \
+	2 "Настройка темы" \
+	3 "Настройка дисплеев" \
+	4 "Настройка звука" \
+	5 "Настройка мыши и клавиатуры (НАСТРОЙКА ЧУВСТВИТЕЛЬНОСТИ НЕ РАБОТАЕТ)" \
+	6 "Настройка интернета (NetworkManager)" \
+	7 "Настройка панели" \
+	8 "Выход" 3>&1 1>&2 2>&3)
+
+	CHOICE=$(echo "$CHOICE" | grep -o '^[1-8]$')
+	
+	echo "$CHOICE"
+	
+    case $CHOICE in
+        1)
+            obconf-qt &
+            ;;
+        2)
+            lxappearance &
+            ;;
+        3)
+            arandr &
+            ;;
+        4)
+            pavucontrol-qt &
+            ;;
+        5)
+            lxinput &
+            ;;
+        6)
+            alacritty -e "nmtui" &
+            ;;
+        7)
+        	tint2conf
+        	;;
+       	8)
+       		exit
+       		;;
+    esac
+done
