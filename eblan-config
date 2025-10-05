@@ -9,9 +9,10 @@ while true; do
 	5 "Настройка мыши и клавиатуры (НАСТРОЙКА ЧУВСТВИТЕЛЬНОСТИ НЕ РАБОТАЕТ)" \
 	6 "Настройка интернета (NetworkManager)" \
 	7 "Настройка панели" \
-	8 "Выход" 3>&1 1>&2 2>&3)
+	8 "Композитинг: $(cat ~/.config/eblan/compositing-enabled)" \
+	9 "Выход" 3>&1 1>&2 2>&3)
 
-	CHOICE=$(echo "$CHOICE" | grep -o '^[1-8]$')
+	CHOICE=$(echo "$CHOICE" | grep -o '^[1-9]$')
 	
 	echo "$CHOICE"
 	
@@ -38,6 +39,14 @@ while true; do
         	tint2conf
         	;;
        	8)
+       		if [ "$(cat ~/.config/eblan/compositing-enabled)" = "ВКЛ" ]; then
+       		    echo "ВЫКЛ" > ~/.config/eblan/compositing-enabled
+       		    pkill picom
+       		else
+       		    echo "ВКЛ" > ~/.config/eblan/compositing-enabled
+       		    nohup picom
+       		fi
+       	9)
        		exit
        		;;
     esac

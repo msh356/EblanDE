@@ -6,7 +6,7 @@ pkgdesc="Next-generation domestic desktop"
 arch=('x86_64')
 url="https://t.me/Eblan_DE"
 license=('GPL')
-depends=('openbox' 'pcmanfm' 'tint2' 'dunst' 'flameshot' 'xdialog' 'bash' 'lxappearance-obconf-gtk3' 'obconf-qt' 'arandr' 'pavucontrol-qt' 'lxinput')
+depends=('openbox' 'pcmanfm' 'tint2' 'dunst' 'flameshot' 'xdialog' 'bash' 'lxappearance-obconf-gtk3' 'obconf-qt' 'arandr' 'pavucontrol-qt' 'lxinput' 'picom')
 source=(
     "eblan-autostart"
     "eblande-session"
@@ -14,10 +14,10 @@ source=(
     "eblan-config"
     "eblan-config.desktop"
 )
-sha256sums=('e2c5cd6840551dee0d4f95d88e6219aa16ba8750f3ba40b60bdb76c6bf3f4029'
-            'ebcece890d61eb30c7ee43058b57baa0b70fa31c68e3ec3b258ec5c6e614f8ee'
+sha256sums=('dd4ec07729c326bf5bdfe7ee87b4a805b6000829332e4e74f0a7290d2c9db304'
+            'd7dc3312f1ed426c7f44ca251f21281aedf567a5b1b10a0f4b20b85299070d3a'
             '727c75f7b8ab80b9b2406f839dfb4ff2a896a9307b794715484a30cc962b4828'
-            '9055968c5cba879aeee93a44b071b6e71d1748689e21b9ca01cf60c7499eb0b1'
+            '68281f649605d6aa20a74c0a1221fb1b27d4cac068f494d0f374363628f2fc45'
             'd728726119d6e1f91a4e12e8e7787fc1dc095d2614adf627396f76db4541b705')
 package() {
     install -Dm755 "eblan-autostart" "$pkgdir/usr/bin/eblan-autostart"

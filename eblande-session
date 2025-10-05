@@ -9,6 +9,9 @@ dunst &
 flameshot &
 eblan-autostart &
 nm-applet &
+if [ "$(cat ~/.config/eblan/compositing-enabled)" = "ВКЛ" ]; then
+    picom &
+fi
 
 # Openbox
 exec openbox-session
