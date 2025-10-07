@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 while true; do
 	CHOICE=$(Xdialog --menu "Настройки EblanDE:" 15 50 4 \

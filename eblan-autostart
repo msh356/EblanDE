@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ -d "$HOME/.config/eblan" ]; then
     exec "$HOME/.config/eblan/eblan-autostart"
 else

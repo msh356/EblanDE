@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 export DESKTOP_SESSION=EblanDE
 export XDG_CURRENT_DESKTOP=EblanDE
 

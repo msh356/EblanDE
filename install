@@ -1,0 +1,30 @@
+#!/bin/sh
+set -e
+if [ "$(id -u)" -ne 0 ]; then
+    echo "===> Please run as root (with doas or su)."
+    exit 1
+fi
+echo "=> Copying files..."
+cp -v eblande-session /usr/local/bin/
+cp -v eblan-autostart /usr/local/bin/
+cp -v eblan-config /usr/local/bin/
+cp -v eblan-config.desktop /usr/local/share/applications/
+cp -v eblande.desktop /usr/local/share/xsessions/
+echo "=> Creating xinitrc in skel..."
+cp -v xinitrc /etc/skel/.xinitrc
+echo "=> Creating xinitrc in your home dir (will create backup)"
+set +e
+cp -v "$HOME/.xinitrc" "$HOME/.xinitrc.old"
+set -e
+cp -v xinitrc "$HOME/.xinitrc"
+if ! command -v pkg >/dev/null 2>&1; then
+    echo "=> Bootstrapping pkg..."
+    ASSUME_ALWAYS_YES=yes pkg bootstrap -f
+fi
+echo "=> Updating pkg database..."
+pkg update -f
+echo "=> Updating packages..."
+pkg upgrade -y
+echo "=> Installing dependencies..."
+pkg install -y xorg openbox tint2 flameshot alacritty picom dunst xdialog obconf-qt pavucontrol-qt lxappearance-gtk3 lxinput arandr
+echo "==> I'm ready! Now try to select EblanDE in session list or use startx to run from .xinitrc"

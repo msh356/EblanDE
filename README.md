@@ -1,2 +1,2 @@
-# EblanDE
-a mirror for EblanDE
+# EblanDE: FreeBSD port
+a EblanDE port for FreeBSD (FutanariOS base)
