@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=EblanInfo
+Icon=preferences-system
+Exec=eblan-info
+Comment=Просмотр информации о системе
+StartupNotify=true
+Terminal=false
+Categories=GTK;Settings;HardwareSettings;X-LXDE-Settings;
+NotShowIn=GNOME;KDE;XFCE;MATE;

@@ -4,7 +4,7 @@ export XDG_CURRENT_DESKTOP=EblanDE
 
 # Main daemons
 pcmanfm --desktop &
-tint2 &
+tint2 & .config/tint2/tint2rc
 dunst &
 flameshot &
 eblan-autostart &

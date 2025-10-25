@@ -44,7 +44,7 @@ while true; do
        		    pkill picom
        		else
        		    echo "ВКЛ" > ~/.config/eblan/compositing-enabled
-       		    nohup picom
+       		    nohup picom &
        		fi
        		;;
        	9)

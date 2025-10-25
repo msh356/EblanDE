@@ -1,0 +1,21 @@
+#!/bin/bash
+
+DISTRO=$(lsb_release -d | cut -f2)
+KERNEL=$(uname -r)
+CPU=$(grep -m1 "model name" /proc/cpuinfo | cut -d: -f2 | sed 's/^ *//')
+MEM=$(free -h | awk '/Mem:/ {print $2}')
+DE=$(echo $XDG_CURRENT_DESKTOP)
+UPTIME=$(uptime -p)
+GPU=$(lspci | grep -m1 -E "VGA|3D" | cut -d: -f3)
+
+yad --title="О системе" \
+    --width=500 --height=400 \
+    --window-icon=computer \
+    --center --fixed --image="computer" \
+    --form --field="Дистрибутив:":RO "$DISTRO" \
+           --field="Ядро:":RO "$KERNEL" \
+           --field="Процессор:":RO "$CPU" \
+           --field="Видеокарта:":RO "$GPU" \
+           --field="Память:":RO "$MEM" \
+           --field="Рабочее окружение:":RO "$DE" \
+           --field="Аптайм:":RO "$UPTIME"
