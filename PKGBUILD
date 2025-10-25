@@ -6,7 +6,7 @@ pkgdesc="experimental fan-made desktop environment"
 arch=('x86_64')
 url="https://t.me/Futanari_OS"
 license=('GPL')
-depends=('openbox' 'pcmanfm' 'tint2' 'dunst' 'flameshot' 'xdialog' 'bash' 'lxappearance-obconf-gtk3' 'obconf-qt' 'arandr' 'pavucontrol-qt' 'lxinput' 'picom' 'jgmenu')
+depends=('openbox' 'pcmanfm' 'tint2' 'dunst' 'flameshot' 'xdialog' 'bash' 'lxappearance-obconf' 'obconf-qt' 'arandr' 'pavucontrol-qt' 'lxinput' 'picom' 'jgmenu')
 source=(
     "eblan-autostart"
     "eblande-session"
