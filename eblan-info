@@ -11,7 +11,7 @@ GPU=$(lspci | grep -m1 -E "VGA|3D" | cut -d: -f3)
 yad --title="О системе" \
     --width=500 --height=400 \
     --window-icon=computer \
-    --center --fixed --image="computer" \
+    --center --fixed --image="/usr/share/eblande/logo.png" \
     --form --field="Дистрибутив:":RO "$DISTRO" \
            --field="Ядро:":RO "$KERNEL" \
            --field="Процессор:":RO "$CPU" \
